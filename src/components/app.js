@@ -1,6 +1,6 @@
-var app = angular.module('video-player');
+angular.module('video-player')
 
-app.component('app', {
+.component('app', {
   templateUrl: 'src/templates/app.html'
   // bindings
   // controller
@@ -15,7 +15,7 @@ app.component('app', {
 // });
 
 .controller('searchResults', function($scope, $http) { 
-  $scope.videos = window.exampleVideoData;
+  this.videos = exampleVideoData;
   // $http.get('src/data/exampleVideoData.js').then(function(data) { 
   //   $scope.videos = data;
   //   console.log($scope.videos);
