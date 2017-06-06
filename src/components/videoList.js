@@ -9,5 +9,12 @@ angular.module('video-player')
   // they hold the model data that we need to pass to view
 // binding, data binding
 .component('videoList', {
+  bindings: {
+    videos: '<' 
+  },
   templateUrl: 'src/templates/videoList.html'
+})
+.controller('videoListCtrl', function($scope, searchResults) { 
+  console.log($scope.videos);
+  //$scope.videos = 'src/data/exampleVideoData.js';
 });
